@@ -12,14 +12,9 @@ public class TestTransformer extends AbstractMessageTransformer {
             System.out.println(muleMessage.getPayloadAsString());
 
         } catch (Exception e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
 
-//         try {
-//             Thread.sleep(1000);
-//         } catch (InterruptedException e) {
-//             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-//         }
         return muleMessage;
     }
 }
