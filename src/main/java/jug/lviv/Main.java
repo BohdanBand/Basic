@@ -11,10 +11,10 @@ public class Main {
 
     public static void main(String[] args) throws MuleException {
 
-        String[] congigs = new String[]{ "demoflow.xml", "demoflow_common.xml", "properties-configurator.xml"};
+        String[] configs = new String[]{ "demoflow.xml"};
 
 
-        final ConfigurationBuilder builder = new SpringXmlConfigurationBuilder(congigs);
+        final ConfigurationBuilder builder = new SpringXmlConfigurationBuilder(configs);
         final MuleContext context = new DefaultMuleContextFactory().createMuleContext(builder);
         context.start();
     }
