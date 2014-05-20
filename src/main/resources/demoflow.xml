@@ -35,7 +35,7 @@
 
         <default-exception-strategy>
             <file:outbound-endpoint path="d:/JUG/FILE/ERROR"
-                                    outputPattern="ERROR_#[function:dateStamp-yyyyMMdd].txt"/>
+                                    outputPattern="ERROR_#[function:dateStamp-yyyy-MM-dd_HH-mm-SSS].txt"/>
         </default-exception-strategy>
     </flow>
 
