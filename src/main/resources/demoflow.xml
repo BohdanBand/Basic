@@ -12,8 +12,8 @@
        				http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        				http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd">
 
-    <custom-transformer name="ParseRequestTransformer" class="jug.lviv.transformer.ParseRequestTransformer"/>
-    <beans:bean class="jug.lviv.evaluator.MessageRouteEvaluator"/>
+    <custom-transformer name="ParseRequestTransformer" class="jug.lviv.jeeconf.mule.transformer.ParseRequestTransformer"/>
+    <beans:bean class="jug.lviv.jeeconf.mule.evaluator.MessageRouteEvaluator"/>
 
     <flow name="BusinessLogicFlow">
 

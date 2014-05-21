@@ -9,7 +9,7 @@ public class TimeOut extends AbstractMessageTransformer {
 
     @Override
     public Object transformMessage(MuleMessage muleMessage, String s) throws TransformerException {
-             try {
+        try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();

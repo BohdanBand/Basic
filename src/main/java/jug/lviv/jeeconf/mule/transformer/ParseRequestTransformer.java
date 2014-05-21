@@ -1,4 +1,4 @@
-package jug.lviv.transformer;
+package jug.lviv.jeeconf.mule.transformer;
 
 import org.mule.api.MuleMessage;
 import org.mule.api.transformer.TransformerException;
@@ -33,13 +33,8 @@ public class ParseRequestTransformer extends AbstractMessageTransformer {
 
             muleMessage.setPayload(content);
 
-            Map<String, Object> saveToMap = new HashMap<String, Object>();
-            saveToMap.put(SAVE_TO, saveTo);
-            muleMessage.addProperties(saveToMap, PropertyScope.SESSION);
-
-            Map<String, Object> fileNameMap = new HashMap<String, Object>();
-            fileNameMap.put(FILE_NAME, fileName);
-            muleMessage.addProperties(fileNameMap, PropertyScope.SESSION);
+            muleMessage.setProperty(SAVE_TO, saveTo, PropertyScope.SESSION);
+            muleMessage.setProperty(FILE_NAME, fileName, PropertyScope.SESSION);
 
             muleMessage.setPayload(content);
 
